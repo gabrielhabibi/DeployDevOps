@@ -2,7 +2,7 @@ pipeline {
     agent any
 
     tools {
-        nodejs "NodeJS 23" // Sesuaikan dengan nama di Global Tool Configuration
+        nodejs "NodeJS 18" // Sesuaikan dengan nama di Global Tool Configuration
     }
 
     stages {
@@ -15,7 +15,7 @@ pipeline {
         stage('Setup NodeJS') {
             steps {
                 script {
-                    def nodejs = tool name: 'NodeJS 23', type: 'jenkins.plugins.nodejs.tools.NodeJSInstallation'
+                    def nodejs = tool name: 'NodeJS 18', type: 'jenkins.plugins.nodejs.tools.NodeJSInstallation'
                     env.PATH = "${nodejs}/bin:${env.PATH}"
                 }
             }
